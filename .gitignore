@@ -1,0 +1,7 @@
+# Arquivos locais de prévia (não fazem parte do site)
+.claude/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

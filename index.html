@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuvia Player — Sua empresa em movimento</title>
+  <meta name="description" content="Nuvia Player: TV corporativa que conecta a gestão de conteúdos na nuvem a um circuito de TVs.">
+  <meta name="theme-color" content="#0B1220">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Sprite: símbolo da marca -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-cloud" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2BD3FF"/>
+      <stop offset=".42" stop-color="#007BFF"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="g-play" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E9BFF"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <symbol id="nuvia-mark" viewBox="0 0 124 92">
+      <!-- nuvem -->
+      <path d="M49 79 H34 A19 19 0 0 1 29 41.6 A29 29 0 0 1 84.6 35.4 A21.8 21.8 0 0 1 97 79 H71 L59 87.5"
+            fill="none" stroke="url(#g-cloud)" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- play -->
+      <path d="M52 45 L52 66 L70 55.5 Z" fill="url(#g-play)" stroke="url(#g-play)" stroke-width="7" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ MENU ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#topo" aria-label="Nuvia Player — início">
+      <svg class="brand__mark"><use href="#nuvia-mark"/></svg>
+      <span class="brand__word"><b>nuvia</b><small>PLAYER</small></span>
+    </a>
+
+    <nav class="nav__links" id="menu" aria-label="Principal">
+      <a href="#plataforma">Plataforma</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#circuito">Circuito de TVs</a>
+      <a href="#segmentos">Segmentos</a>
+      <a href="#beneficios">Benefícios</a>
+      <a class="nav__panel-m" href="#" data-panel>Acessar painel</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="motion-btn" id="motionBtn" type="button" aria-pressed="false" title="Reduzir movimentos">
+        <span class="motion-btn__ico" aria-hidden="true"></span>
+        <span class="motion-btn__txt">Reduzir movimentos</span>
+      </button>
+      <a class="btn btn--sm btn--ghost nav__panel" href="#" data-panel>
+        <svg class="i" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Acessar painel</a>
+      <a class="btn btn--sm btn--grad nav__cta" href="#circuito">Ver demonstração</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============ 1. HERO / PLATAFORMA ============ -->
+<section class="hero" id="topo">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="glow glow--a"></div>
+    <div class="glow glow--b"></div>
+    <div class="grid-lines"></div>
+  </div>
+
+  <div class="wrap hero__in">
+    <div class="hero__copy">
+      <span class="eyebrow"><i class="dot"></i> Plataforma de TV corporativa</span>
+      <h1 class="hero__title">Todas as TVs.<br><span class="grad-text">Um só controle.</span></h1>
+      <p class="hero__lead">Sua empresa em movimento.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--grad btn--lg" href="#circuito">
+          Ver demonstração
+          <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost btn--lg" href="#plataforma">Conhecer recursos</a>
+      </div>
+      <ul class="hero__chips" aria-label="Destaques">
+        <li><svg class="i" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2M3 12a9 9 0 0 1 15.5-6.2"/><path d="M18 2v4h-4M6 22v-4h4"/></svg>Sincronização rápida</li>
+        <li><svg class="i" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/><path d="M3 3l18 18"/></svg>Funciona offline</li>
+        <li><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Android TV · Fire TV</li>
+      </ul>
+    </div>
+
+    <!-- Composição: painel + nuvem + TVs -->
+    <div class="hero__visual" aria-label="Ilustração: o painel envia conteúdos pela nuvem para várias TVs" role="img">
+      <svg class="flow" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="g-line" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#007BFF"/><stop offset="1" stop-color="#8B5CF6"/>
+          </linearGradient>
+        </defs>
+        <path class="flow__base" d="M27 47 C27 28, 36 16, 47 15"/>
+        <path class="flow__base" d="M57 15 C63 15, 63 13, 69 13"/>
+        <path class="flow__base" d="M57 17 C63 22, 62 45, 69 46"/>
+        <path class="flow__base" d="M56 18 C60 40, 58 76, 69 79"/>
+        <path class="flow__pulse" pathLength="100" d="M27 47 C27 28, 36 16, 47 15"/>
+        <path class="flow__pulse p2" pathLength="100" d="M57 15 C63 15, 63 13, 69 13"/>
+        <path class="flow__pulse p3" pathLength="100" d="M57 17 C63 22, 62 45, 69 46"/>
+        <path class="flow__pulse p4" pathLength="100" d="M56 18 C60 40, 58 76, 69 79"/>
+      </svg>
+
+      <div class="hv-cloud">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a5 5 0 1 1 .9-9.9A6.5 6.5 0 0 1 20 10.5 4 4 0 0 1 18 18H7z"/></svg>
+        <span>Nuvem</span>
+      </div>
+
+      <!-- Painel -->
+      <div class="hv-panel">
+        <div class="win-bar"><i></i><i></i><i></i><span>Painel · Nuvia Player</span></div>
+        <div class="hv-panel__body">
+          <aside class="hv-side" aria-hidden="true">
+            <svg class="brand__mark"><use href="#nuvia-mark"/></svg>
+            <i class="on"></i><i></i><i></i><i></i>
+          </aside>
+          <div class="hv-main">
+            <div class="hv-row">
+              <b>Programação</b>
+              <span class="pill pill--live"><i></i>Em exibição</span>
+            </div>
+            <div class="hv-thumbs">
+              <div class="th t-brand"></div><div class="th t-purple"></div><div class="th t-orange"></div><div class="th t-cyan"></div>
+            </div>
+            <div class="hv-timeline">
+              <span style="--w:28%" class="t-brand"></span><span style="--w:18%" class="t-purple"></span><span style="--w:30%" class="t-orange"></span><span style="--w:24%" class="t-cyan"></span>
+              <i class="hv-head"></i>
+            </div>
+            <div class="hv-row hv-row--foot">
+              <span class="hv-tvs"><i></i><i></i><i></i><em>3 telas</em></span>
+              <span class="hv-publish">Publicar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TVs -->
+      <div class="hv-tv hv-tv--1"><div class="tv"><div class="screen" data-rotator="hero1"></div></div></div>
+      <div class="hv-tv hv-tv--2"><div class="tv"><div class="screen" data-rotator="hero2"></div></div></div>
+      <div class="hv-tv hv-tv--3"><div class="tv"><div class="screen" data-rotator="hero3"></div></div></div>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#como-funciona" aria-label="Rolar para Como funciona"><span></span></a>
+</section>
+
+<!-- ============ PLATAFORMA / RECURSOS ============ -->
+<section class="section section--dark feats" id="plataforma">
+  <div class="hero__bg" aria-hidden="true"><div class="grid-lines"></div></div>
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow">Plataforma</span>
+      <h2>Tecnologia que mantém<br><span class="grad-text">suas telas no ar.</span></h2>
+    </header>
+
+    <div class="bento">
+      <!-- Publicação remota -->
+      <article class="fx fx--wide reveal">
+        <span class="fx__k">// publicação remota</span>
+        <h3>Publique de qualquer lugar.</h3>
+        <p>Um clique atualiza todas as telas.</p>
+        <div class="fx-pub" aria-hidden="true">
+          <div class="fx-pub__panel">
+            <i></i><i></i><i></i>
+            <span class="fx-pub__btn">Publicar</span>
+          </div>
+          <span class="fx-wire"></span>
+          <div class="fx-pub__cloud"><svg class="i" viewBox="0 0 24 24"><path d="M7 18a5 5 0 1 1 .9-9.9A6.5 6.5 0 0 1 20 10.5 4 4 0 0 1 18 18H7z"/></svg></div>
+          <svg class="fx-fan" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="fx-fan__b" d="M0 50 C50 50, 50 16, 100 16"/><path class="fx-fan__b" d="M0 50 H100"/><path class="fx-fan__b" d="M0 50 C50 50, 50 84, 100 84"/>
+            <path class="fx-fan__p" pathLength="100" d="M0 50 C50 50, 50 16, 100 16"/><path class="fx-fan__p" pathLength="100" d="M0 50 H100"/><path class="fx-fan__p" pathLength="100" d="M0 50 C50 50, 50 84, 100 84"/>
+          </svg>
+          <div class="fx-pub__tvs">
+            <div class="screen" data-fx="pub1"></div>
+            <div class="screen" data-fx="pub2"></div>
+            <div class="screen" data-fx="pub3"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sincronização -->
+      <article class="fx reveal">
+        <span class="fx__k">// sync</span>
+        <h3>Sincronização rápida.</h3>
+        <p>Vídeos prontos nas telas em pouco tempo.</p>
+        <ul class="fx-sync" id="fxSync" aria-hidden="true">
+          <li><span>ofertas_semana.mp4</span><em>0%</em><i><b></b></i></li>
+          <li><span>institucional.mp4</span><em>0%</em><i><b></b></i></li>
+          <li><span>cardapio_dia.png</span><em>0%</em><i><b></b></i></li>
+        </ul>
+      </article>
+
+      <!-- Offline -->
+      <article class="fx reveal">
+        <span class="fx__k">// offline</span>
+        <h3>Caiu a internet? A tela segue.</h3>
+        <p>Após sincronizar, tudo roda localmente.</p>
+        <div class="fx-off" id="fxOff" aria-hidden="true">
+          <div class="tv"><div class="screen" data-fx="off"></div></div>
+          <span class="fx-off__net"><i></i><b>Online</b></span>
+        </div>
+      </article>
+
+      <!-- Status -->
+      <article class="fx reveal">
+        <span class="fx__k">// status</span>
+        <h3>Cada tela sob controle.</h3>
+        <p>Veja quem está online e o que está no ar.</p>
+        <ul class="fx-status" id="fxStatus" aria-hidden="true"></ul>
+      </article>
+
+      <!-- Playlists -->
+      <article class="fx reveal">
+        <span class="fx__k">// playlists</span>
+        <h3>Programação por hora e dia.</h3>
+        <p>Sequências que entram no horário certo.</p>
+        <div class="fx-tl" aria-hidden="true">
+          <div class="fx-tl__days"><b>S</b><b>T</b><b>Q</b><b>Q</b><b>S</b><b>S</b><b class="off">D</b></div>
+          <div class="fx-tl__row"><span class="t-brand" style="--w:30%">Manhã</span><span class="t-orange" style="--w:40%">Ofertas</span><span class="t-purple" style="--w:30%">Noite</span><i></i></div>
+          <div class="fx-tl__lbl"><span>08h</span><span>12h</span><span>18h</span><span>22h</span></div>
+        </div>
+      </article>
+
+      <!-- Upload -->
+      <article class="fx reveal">
+        <span class="fx__k">// mídia</span>
+        <h3>Imagens e vídeos na nuvem.</h3>
+        <p>Uma biblioteca para todas as telas.</p>
+        <div class="fx-up" aria-hidden="true">
+          <span class="fx-up__f t-brand"><svg class="i" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg></span>
+          <span class="fx-up__f t-orange"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></svg></span>
+          <span class="fx-up__f t-purple"><svg class="i" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg></span>
+          <div class="fx-up__lib"><svg class="i" viewBox="0 0 24 24"><path d="M7 18a5 5 0 1 1 .9-9.9A6.5 6.5 0 0 1 20 10.5 4 4 0 0 1 18 18H7z"/><path d="M12 16v-5M9.5 13.5L12 11l2.5 2.5"/></svg></div>
+        </div>
+      </article>
+
+      <!-- Grupos -->
+      <article class="fx reveal">
+        <span class="fx__k">// grupos</span>
+        <h3>Publique por grupo.</h3>
+        <p>Ambientes, setores ou unidades.</p>
+        <div class="fx-grp" id="fxGrp" aria-hidden="true">
+          <div class="fx-grp__chips"><b data-g="a">Clientes</b><b data-g="b">Equipe</b><b data-g="c">Unidade 2</b></div>
+          <div class="fx-grp__tvs">
+            <i data-g="a"></i><i data-g="a"></i><i data-g="b"></i><i data-g="a"></i><i data-g="c"></i><i data-g="b"></i><i data-g="c"></i><i data-g="c"></i>
+          </div>
+        </div>
+      </article>
+
+      <!-- Usuários -->
+      <article class="fx reveal">
+        <span class="fx__k">// acessos</span>
+        <h3>Usuários e permissões.</h3>
+        <p>Cada pessoa acessa o que precisa.</p>
+        <ul class="fx-users" aria-hidden="true">
+          <li><span class="av t-brand">G</span><b>Gestão</b><em class="lv lv--3"><i></i><i></i><i></i></em></li>
+          <li><span class="av t-purple">M</span><b>Marketing</b><em class="lv lv--2"><i></i><i></i><i></i></em></li>
+          <li><span class="av t-teal">L</span><b>Loja</b><em class="lv lv--1"><i></i><i></i><i></i></em></li>
+        </ul>
+      </article>
+
+      <!-- Players -->
+      <article class="fx fx--full fx--players reveal">
+        <div>
+          <span class="fx__k">// players</span>
+          <h3>Roda no aparelho que você já conhece.</h3>
+          <p>Ligue na TV, sincronize e pronto.</p>
+        </div>
+        <ul class="devices">
+          <li>
+            <svg viewBox="0 0 120 80" aria-hidden="true"><rect x="8" y="6" width="104" height="60" rx="5" class="d-frame"/><rect x="13" y="11" width="94" height="50" rx="2" class="d-screen"/><path d="M48 72h24M60 66v6" class="d-line"/><path d="M52 30l14 6-14 6z" class="d-play"/></svg>
+            <b>Android TV</b>
+          </li>
+          <li>
+            <svg viewBox="0 0 120 80" aria-hidden="true"><rect x="22" y="30" width="76" height="26" rx="7" class="d-frame"/><circle cx="86" cy="43" r="2.5" class="d-led"/><path d="M34 43h30" class="d-line"/><path d="M30 56l-4 6M90 56l4 6" class="d-line"/></svg>
+            <b>TV Box</b>
+          </li>
+          <li>
+            <svg viewBox="0 0 120 80" aria-hidden="true"><rect x="18" y="32" width="66" height="18" rx="6" class="d-frame"/><rect x="84" y="36" width="18" height="10" rx="2" class="d-frame"/><circle cx="30" cy="41" r="2" class="d-led"/><path d="M40 41h30" class="d-line"/></svg>
+            <b>Fire TV Stick</b>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. COMO FUNCIONA ============ -->
+<section class="section section--light" id="como-funciona">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow eyebrow--dark">Como funciona</span>
+      <h2>Quatro passos.<br><span class="grad-text">Todas as telas no ar.</span></h2>
+    </header>
+
+    <ol class="steps reveal" role="tablist" aria-label="Etapas">
+      <li><button role="tab" id="tab-0" aria-controls="howPanel" aria-selected="true" data-step="0">
+        <span class="steps__n">01</span>
+        <span class="steps__ico"><svg class="i" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></span>
+        <b>Envie</b></button></li>
+      <li><button role="tab" id="tab-1" aria-controls="howPanel" aria-selected="false" data-step="1" tabindex="-1">
+        <span class="steps__n">02</span>
+        <span class="steps__ico"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <b>Programe</b></button></li>
+      <li><button role="tab" id="tab-2" aria-controls="howPanel" aria-selected="false" data-step="2" tabindex="-1">
+        <span class="steps__n">03</span>
+        <span class="steps__ico"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="6" rx="1.5"/><rect x="13" y="4" width="8" height="6" rx="1.5"/><rect x="3" y="14" width="8" height="6" rx="1.5"/><rect x="13" y="14" width="8" height="6" rx="1.5"/></svg></span>
+        <b>Selecione as TVs</b></button></li>
+      <li><button role="tab" id="tab-3" aria-controls="howPanel" aria-selected="false" data-step="3" tabindex="-1">
+        <span class="steps__n">04</span>
+        <span class="steps__ico"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>
+        <b>Publique</b></button></li>
+    </ol>
+
+    <div class="app reveal">
+      <div class="win-bar win-bar--light"><i></i><i></i><i></i><span>Nuvia Player · Demonstração</span><em class="demo-tag">Dados de exemplo</em></div>
+      <div class="app__panel" id="howPanel" role="tabpanel" aria-labelledby="tab-0" aria-live="polite"></div>
+      <div class="app__foot">
+        <button class="btn btn--sm btn--soft" id="howPrev" type="button">
+          <svg class="i" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Voltar</button>
+        <div class="app__dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <button class="btn btn--sm btn--grad" id="howNext" type="button">Próximo
+          <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. CIRCUITO DE TVs ============ -->
+<section class="section section--dark circuit" id="circuito">
+  <div class="hero__bg" aria-hidden="true"><div class="glow glow--c"></div><div class="grid-lines"></div></div>
+  <div class="wrap">
+    <header class="sec-head sec-head--row reveal">
+      <div>
+        <span class="eyebrow">Circuito de TVs · na prática</span>
+        <h2>Um supermercado.<br><span class="grad-text">Seis telas. Um painel.</span></h2>
+      </div>
+      <p class="disclaimer">
+        <svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+        <span><b>Loja fictícia.</b> Mercado Lumina é um cenário de demonstração. Conteúdos e preços são ilustrativos.</span>
+      </p>
+    </header>
+
+    <div class="ctrl reveal">
+      <div class="filters" role="group" aria-label="Filtrar telas">
+        <button type="button" class="chip is-on" data-filter="todas" aria-pressed="true">Todas</button>
+        <button type="button" class="chip" data-filter="clientes" aria-pressed="false">Clientes</button>
+        <button type="button" class="chip" data-filter="produtos" aria-pressed="false">Produtos</button>
+        <button type="button" class="chip" data-filter="equipe" aria-pressed="false">Equipe</button>
+      </div>
+      <button type="button" class="net-toggle" id="netToggle" aria-pressed="false">
+        <span class="net-toggle__sw" aria-hidden="true"></span>
+        <span>Simular queda de internet</span>
+      </button>
+    </div>
+
+    <div class="stage reveal" id="stage">
+      <svg class="stage__lines" id="stageLines" aria-hidden="true"></svg>
+      <div class="stage__col stage__col--l" id="colL"></div>
+      <div class="hub" id="hub">
+        <div class="win-bar"><i></i><i></i><i></i><span>Painel central</span><em class="hub__clock" id="hubClock">--:--</em></div>
+        <div class="hub__body">
+          <div class="hub__brand">
+            <svg class="brand__mark"><use href="#nuvia-mark"/></svg>
+            <div><b>Mercado Lumina</b><small>Loja fictícia · 6 telas</small></div>
+          </div>
+          <div class="hub__net" id="hubNet"><i></i><span>Online · <b id="hubOnline">6/6</b> telas sincronizadas</span></div>
+          <div class="hub__now">
+            <span>Campanha ativa</span>
+            <b id="hubCampaign">Programação padrão</b>
+          </div>
+          <ul class="hub__list" id="hubList"></ul>
+        </div>
+      </div>
+      <div class="stage__col stage__col--r" id="colR"></div>
+    </div>
+
+    <!-- Campanhas -->
+    <div class="camp reveal" id="camp">
+      <div class="camp__head">
+        <h3>Simule uma campanha</h3>
+        <p>Escolha, selecione as telas e aplique.</p>
+      </div>
+      <div class="camp__body">
+        <div class="camp__list" id="campList" role="radiogroup" aria-label="Campanhas de exemplo"></div>
+        <div class="camp__targets">
+          <span class="camp__label">Telas</span>
+          <div class="camp__chips" id="campTargets"></div>
+          <div class="camp__actions">
+            <button type="button" class="btn btn--grad" id="campApply">
+              <svg class="i" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              Aplicar nas telas</button>
+            <button type="button" class="btn btn--ghost" id="campReset" disabled>Restaurar</button>
+          </div>
+          <p class="camp__status" id="campStatus" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEGMENTOS ============ -->
+<section class="section section--light segs" id="segmentos">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow eyebrow--dark">Segmentos</span>
+      <h2>Feita para qualquer<br><span class="grad-text">negócio com telas.</span></h2>
+    </header>
+    <div class="segs__in">
+      <div class="segs__list reveal" id="segList" role="tablist" aria-label="Segmentos"></div>
+      <div class="segs__view reveal">
+        <div class="tv tv--big"><div class="screen" id="segScreen"></div></div>
+        <div class="segs__stand" aria-hidden="true"></div>
+        <p class="segs__cap" id="segCap" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. BENEFÍCIOS ============ -->
+<section class="section section--light benefits" id="beneficios">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow eyebrow--dark">Benefícios</span>
+      <h2>Mais controle.<br><span class="grad-text">Mais presença.</span></h2>
+    </header>
+
+    <div class="ben">
+      <div class="ben__center reveal" aria-hidden="true">
+        <div class="ben__ring"></div>
+        <div class="ben__ring ben__ring--2"></div>
+        <svg class="ben__mark"><use href="#nuvia-mark"/></svg>
+      </div>
+      <ul class="ben__list">
+        <li class="reveal"><span class="ben__ico"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><b>Gestão centralizada</b><small>Tudo em um painel.</small></li>
+        <li class="reveal"><span class="ben__ico"><svg class="i" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>Conteúdo por ambiente</b><small>Cada tela, sua mensagem.</small></li>
+        <li class="reveal"><span class="ben__ico"><svg class="i" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><b>Atualização ágil</b><small>Mudou? Publicou.</small></li>
+        <li class="reveal"><span class="ben__ico"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><b>Marca em destaque</b><small>Sua identidade em toda tela.</small></li>
+        <li class="reveal"><span class="ben__ico"><svg class="i" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.4A5 5 0 0 1 21 19"/></svg></span><b>Equipe conectada</b><small>Recados onde a equipe está.</small></li>
+        <li class="reveal"><span class="ben__ico"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="12" height="9" rx="1.5"/><path d="M6 18h6"/><path d="M19 8v8M15 12h8" /></svg></span><b>Expansão do circuito</b><small>Novas telas, mesmo controle.</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. ENCERRAMENTO ============ -->
+<section class="cta" id="contato">
+  <div class="cta__wall" aria-hidden="true" id="ctaWall"></div>
+  <div class="wrap cta__in reveal">
+    <svg class="cta__mark" aria-hidden="true"><use href="#nuvia-mark"/></svg>
+    <h2>Dê vida às suas telas.</h2>
+    <div class="cta__btns">
+      <a class="btn btn--light btn--lg" id="ctaBtn" href="#contato">
+        Solicitar demonstração
+        <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--ghost btn--lg" href="#" data-panel>Já sou cliente · Acessar painel</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="brand" href="#topo" aria-label="Nuvia Player — voltar ao topo">
+      <svg class="brand__mark"><use href="#nuvia-mark"/></svg>
+      <span class="brand__word"><b>nuvia</b><small>PLAYER</small></span>
+    </a>
+    <p class="foot__slogan">Sua empresa em movimento.</p>
+    <p class="foot__note">Demonstrações com dados de exemplo. © <span id="year"></span> Nuvia Player.</p>
+  </div>
+</footer>
+
+<!-- Detalhe da TV -->
+<dialog class="tvd" id="tvDialog" aria-labelledby="tvdTitle">
+  <div class="tvd__in">
+    <button class="tvd__close" type="button" id="tvdClose" aria-label="Fechar">
+      <svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="tvd__screen">
+      <div class="tv tv--big"><div class="screen" id="tvdScreen"></div></div>
+      <div class="tvd__progress" id="tvdProgress"></div>
+    </div>
+    <div class="tvd__info">
+      <span class="eyebrow" id="tvdCat">Clientes</span>
+      <h3 id="tvdTitle">Entrada</h3>
+      <p class="tvd__role" id="tvdRole"></p>
+      <div class="tvd__meta"><span><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Todos os dias · 07h às 22h</span><span class="demo-tag">Exemplo</span></div>
+      <ol class="tvd__list" id="tvdList"></ol>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
