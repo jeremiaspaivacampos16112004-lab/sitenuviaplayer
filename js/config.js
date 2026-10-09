@@ -12,7 +12,7 @@ window.NUVIA_CONFIG = {
   // Link externo do painel de controle (botões "Acessar painel").
   // Ex.: "https://painel.seudominio.com.br"
   painel: {
-    url: ""
+    url: "https://painel.nuviaplayer.com.br"
   },
 
   contato: {
