@@ -21,6 +21,13 @@ Edite `js/config.js`:
 - `painel.url`: link externo do painel de controle (botões "Acessar painel").
 - `contato.url`, `contato.whatsapp` ou `contato.email`: canal do botão "Solicitar demonstração".
 
+## Versão dos arquivos
+
+O `index.html` carrega `css/style.css`, `js/config.js` e `js/main.js` com `?v=AAAAMMDD`.
+Ao alterar qualquer um deles, troque esse número nas três linhas (ex.: `?v=20261020`;
+segunda mudança no mesmo dia: `?v=20261020b`). Sem isso, quem já visitou o site
+continua vendo a versão antiga por até 10 minutos (cache do GitHub Pages).
+
 ## Publicar no GitHub Pages
 
 1. No repositório, abra **Settings → Pages**.
