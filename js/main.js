@@ -918,7 +918,12 @@
   }
   const ctaBtn = $("#ctaBtn");
   const href = contactHref();
-  if (href) {
+  if (href && href.startsWith("mailto:")) {
+    // mailto: sozinho nao faz nada em quem nao tem app de email configurado
+    // (a maioria usa Gmail/Outlook no navegador) - oferece as opcoes.
+    ctaBtn.href = href;
+    ctaBtn.addEventListener("click", e => { e.preventDefault(); abrirContato(); });
+  } else if (href) {
     ctaBtn.href = href;
     if (/^https?:/.test(href)) { ctaBtn.target = "_blank"; ctaBtn.rel = "noopener"; }
   } else {
@@ -926,6 +931,50 @@
       e.preventDefault();
       toast("Contato comercial ainda não configurado (js/config.js).");
     });
+  }
+
+  function abrirContato() {
+    const c = CFG.contato || {};
+    const email = c.email.trim();
+    const assunto = c.mensagem || "Demonstração Nuvia Player";
+    let modal = $("#contatoModal");
+    if (!modal) {
+      modal = document.createElement("div");
+      modal.id = "contatoModal";
+      modal.className = "cmodal";
+      modal.setAttribute("role", "dialog");
+      modal.setAttribute("aria-modal", "true");
+      modal.setAttribute("aria-labelledby", "contatoTitulo");
+      const q = s => encodeURIComponent(s);
+      modal.innerHTML = `
+        <div class="cmodal__box">
+          <button class="cmodal__x" type="button" aria-label="Fechar">&times;</button>
+          <h3 id="contatoTitulo">Solicitar demonstração</h3>
+          <p>Escreva para a gente e retornamos rapidinho:</p>
+          <div class="cmodal__email">
+            <span>${esc(email)}</span>
+            <button type="button" class="cmodal__copy">Copiar</button>
+          </div>
+          <div class="cmodal__opts">
+            <a class="btn btn--light" target="_blank" rel="noopener"
+               href="https://mail.google.com/mail/?view=cm&fs=1&to=${q(email)}&su=${q(assunto)}">Abrir no Gmail</a>
+            <a class="btn btn--ghost" target="_blank" rel="noopener"
+               href="https://outlook.live.com/mail/0/deeplink/compose?to=${q(email)}&subject=${q(assunto)}">Abrir no Outlook</a>
+            <a class="btn btn--ghost" href="mailto:${email}?subject=${q(assunto)}">Outro app de email</a>
+          </div>
+        </div>`;
+      document.body.appendChild(modal);
+      const fechar = () => { modal.classList.remove("show"); ctaBtn.focus(); };
+      modal.addEventListener("click", e => { if (e.target === modal || e.target.closest(".cmodal__x")) fechar(); });
+      document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("show")) fechar(); });
+      modal.querySelector(".cmodal__copy").addEventListener("click", async e => {
+        try { await navigator.clipboard.writeText(email); e.target.textContent = "Copiado!"; }
+        catch { e.target.textContent = "Selecione e copie"; }
+        setTimeout(() => (e.target.textContent = "Copiar"), 2200);
+      });
+    }
+    modal.classList.add("show");
+    modal.querySelector(".cmodal__opts a").focus();
   }
 
   // Link externo do painel de controle

@@ -996,3 +996,33 @@ html.reduce-motion .hv-head { left: 40%; }
 @media (min-width: 1440px) {
   .motion-btn__txt { display: inline; }
 }
+
+/* Janela de contato (Solicitar demonstração) */
+.cmodal {
+  position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center;
+  padding: 16px; background: rgba(5, 9, 18, .72); backdrop-filter: blur(6px);
+}
+.cmodal.show { display: flex; animation: pop .35s var(--ease) both; }
+.cmodal__box {
+  position: relative; width: 100%; max-width: 440px; padding: 30px 26px 26px; border-radius: var(--r-lg);
+  background: var(--navy-2); color: #fff; box-shadow: var(--shadow), inset 0 0 0 1px var(--line-d);
+}
+.cmodal__box h3 { margin: 0 0 6px; font-size: 22px; }
+.cmodal__box p { margin: 0 0 18px; color: var(--muted-d); font-size: 15px; }
+.cmodal__x {
+  position: absolute; top: 12px; right: 14px; width: 36px; height: 36px; border: 0; border-radius: 50%;
+  background: rgba(255, 255, 255, .06); color: #fff; font-size: 22px; line-height: 1; cursor: pointer;
+}
+.cmodal__x:hover { background: rgba(255, 255, 255, .14); }
+.cmodal__email {
+  display: flex; align-items: center; gap: 10px; padding: 10px 10px 10px 16px; margin-bottom: 18px;
+  border-radius: var(--r-sm); background: var(--navy-3); box-shadow: inset 0 0 0 1px var(--line-d);
+}
+.cmodal__email span { flex: 1; min-width: 0; overflow-wrap: anywhere; font-weight: 600; color: var(--cyan); }
+.cmodal__copy {
+  flex-shrink: 0; padding: 7px 14px; border: 0; border-radius: 999px; cursor: pointer;
+  background: rgba(255, 255, 255, .1); color: #fff; font: inherit; font-size: 13px; font-weight: 600;
+}
+.cmodal__copy:hover { background: rgba(255, 255, 255, .18); }
+.cmodal__opts { display: grid; gap: 10px; }
+.cmodal__opts .btn { width: 100%; }
