@@ -23,7 +23,7 @@ window.NUVIA_CONFIG = {
     whatsapp: "",
 
     // E-mail comercial. Ex.: "comercial@seudominio.com.br"
-    email: "",
+    email: "contato@nuviaplayer.com.br",
 
     // Mensagem inicial usada no WhatsApp e no assunto do e-mail
     mensagem: "Olá! Gostaria de solicitar uma demonstração da Nuvia Player."
